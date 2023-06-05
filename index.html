@@ -44,6 +44,40 @@
     <!--== Main Style CSS ==-->
     <link href="assets/css/style.css" rel="stylesheet" />
     <script id='pixel-script-poptin' src='https://cdn.popt.in/pixel.js?id=6d2026f4ea678' async='true'></script>
+    <style>
+      /* CSS for the button */
+      .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 24px;
+      text-decoration: none;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-icon:hover {
+      background-color: #128C7E;
+    }
+
+     /* CSS to handle the position when scrolling */
+      .whatsapp-icon.whatsapp-icon-bottom {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+      }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
   </head>
 
   <body>
@@ -2334,9 +2368,13 @@
                   </div>
                 </div>
               </div>
+              
+              
             </div>
           </div>
         </section>
+
+        
         <!--== End Blog Area Wrapper ==-->
       </main>
 
@@ -2507,8 +2545,10 @@
       <!--== End Footer Area Wrapper ==-->
 
       <!--== Scroll Top Button ==-->
-      <div class="scroll-to-top">
-        <span class="fa fa-angle-double-up"></span>
+      <div>
+        <a class="whatsapp-icon" href="https://wa.me/+254 722 149 411" target="_blank">
+          <i class="fab fa-whatsapp"></i>
+        </a>
       </div>
 
       <!--== Start Product Quick View ==-->
@@ -2781,6 +2821,18 @@
 
     <!--=== Custom Js ===-->
     <script src="assets/js/custom.js"></script>
+    <script>
+      // JavaScript to handle the scroll event
+      var whatsappIcon = document.querySelector('.whatsapp-icon');
+  
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 100) {
+          whatsappIcon.classList.add('hidden');
+        } else {
+          whatsappIcon.classList.remove('hidden');
+        }
+      });
+    </script>
   </body>
 
   <!-- Mirrored from htmldemo.net/kidol/kidol/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 16 May 2023 08:40:41 GMT -->
